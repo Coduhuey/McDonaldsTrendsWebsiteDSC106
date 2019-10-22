@@ -1,6 +1,6 @@
 var csv_data;
 
-var all_series_data = []
+var daily_data = []
 
 $.get('daily_sales.csv', function(csv) {
 
@@ -13,21 +13,32 @@ $.get('daily_sales.csv', function(csv) {
     if(skip_first){
       
       for(var j = 1; j < row.length; j++){
-        all_series_data.push([]);
+        daily_data.push([]);
       }
       skip_first = false;
       return true;
     }
     for(var j = 2; j < row.length; j++){
-      all_series_data[j-2].push(parseInt(row[j]));
+      daily_data[j-2].push(parseInt(row[j]));
     }
     
     col1.push(""+day)
     day += 1;
   });
-  $('#container').highcharts({
+  $('#container5').highcharts({
 
   //CATEGORIES OUT OF FIRST COLUMN!
+  chart:{
+    backgroundColor:{
+      linearGradient: [0, 0, 500, 500],
+       stops: [
+         [0, 'rgb(255, 255, 250)'],
+         [1, 'rgb(255, 250, 250)']
+       ]
+     },
+     polar: true,
+     type: 'line'
+  },
   xAxis: {
     type: "category",
     labels: {
@@ -63,63 +74,63 @@ $.get('daily_sales.csv', function(csv) {
       {
         //NEEDS TO BE INT, WHY DID I THINK STRING??
       name: "Hamburger, North East",
-      data: all_series_data[0]
+      data: daily_data[0]
     },
     {
       name:"Chicken Fillet, North East",
-      data: all_series_data[1]
+      data: daily_data[1]
     },
     {
       name:"Fish Fillet North East",
-      data: all_series_data[2]
+      data: daily_data[2]
     },
     {
       name:"Hamburger, South West",
-      data: all_series_data[3]
+      data: daily_data[3]
     },
     {
       name:"Chicken Fillet, South West",
-      data: all_series_data[4]
+      data: daily_data[4]
     },
     {
       name:"Fish Fillet, South West",
-      data: all_series_data[5]
+      data: daily_data[5]
     },
     {
       name:"Hamburger, North West",
-      data: all_series_data[6]
+      data: daily_data[6]
     },
     {
       name:"Chicken Fillet, North West",
-      data: all_series_data[7]
+      data: daily_data[7]
     },
     {
       name:"Fish Fillet, North West",
-      data: all_series_data[8]
+      data: daily_data[8]
     },
     {
       name:"Hamburger, South East",
-      data: all_series_data[9]
+      data: daily_data[9]
     },
     {
       name:"Chicken Fillet, South East",
-      data: all_series_data[10]
+      data: daily_data[10]
     },
     {
       name:"Fish Fillet, South East",
-      data: all_series_data[11]
+      data: daily_data[11]
     },
     {
       name:"Hamburger, Central",
-      data: all_series_data[12]
+      data: daily_data[12]
     },
     {
       name:"Chicken Fillet, Central",
-      data: all_series_data[13]
+      data: daily_data[13]
     },
     {
       name:"Fish Fillet, Central",
-      data: all_series_data[14]
+      data: daily_data[14]
     },
   ]
   });

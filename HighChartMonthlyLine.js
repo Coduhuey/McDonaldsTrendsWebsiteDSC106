@@ -24,9 +24,20 @@ $.get('monthly_sales.csv', function(csv) {
     col1.push(""+day)
     day += 1;
   });
-  $('#container').highcharts({
+  $('#container3').highcharts({
 
   //CATEGORIES OUT OF FIRST COLUMN!
+  chart:{
+    backgroundColor:{
+      linearGradient: [0, 0, 500, 500],
+       stops: [
+         [0, 'rgb(255, 255, 250)'],
+         [1, 'rgb(255, 250, 250)']
+       ]
+     },
+     polar: true,
+     type: 'line'
+  },
   xAxis: {
     type: "category",
     labels: {
@@ -40,9 +51,13 @@ $.get('monthly_sales.csv', function(csv) {
       "Jan-18","Feb-18", "Mar-18", "Apr-18", "May-18", "Jun-18", "Jul-18", "Aug-18", "Sep-18", "Oct-18", "Nov-18", "Dec-18",
       "Jan-19","Feb-19", "Mar-19", "Apr-19", "May-19", "Jun-19", "Jul-19", "Aug-19", "Sep-19"],
        plotLines: [{
+        label: {
+            text:"BK Burger"//,
+            //style:"font-size:1rem;"
+        },
             color: '#777777', // Grey
             width: 2,
-            value: 44 // Position, you'll have to translate this to the values on your x axis
+            value: 33 // Position, you'll have to translate this to the values on your x axis
        }]
     },
     yAxis:{

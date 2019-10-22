@@ -11,17 +11,23 @@
         font-family: myFirstFont;
     }
 
+    body{
+        background-color:rgb(255, 251, 251)
+    }
+
     #header{
-        background-color: red;
-        width:100%;
-        height:10%;
+        background-color: #BE0C0C;
+        border-radius: 25px;
+        border: 5px solid rgba(228, 45, 45, 0.897);
+        padding: 1rem;
+        width: 100%;
+        height: 20%;
     }
 
     #subheader{
-        background-color: gold;
-        float: right;
-        width:5%;
-        height: 12%;
+        background-color: rgb(253, 227, 78);
+        float:top;
+        height: 4rem;
     }
     </style>
     <body>
@@ -34,15 +40,27 @@
         <script src="https://code.highcharts.com/modules/histogram-bellcurve.js"></script>
         
         <div id="header">
-            <img src="UDkaj5UU.jpg" style="float:left;width:20%;height:10%"/>
-            <h1 style="color:gold">I'm Lovin It</h1>
-            <div id="subheader"></div>
+            <img src="UDkaj5UU.jpg" style="float:left;max-width:10%;max-height:2%"/>
+            <h1 style="color:#FFFFFF;text-align:center;"> Sales Pitted Against BK Impossible Burger</h1>
+            <h2 style="color:#FFC300;text-align:center;">I'm Lovin' It</h1>
         </div>
-        <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+        <br/>
+        <p>
+            <a href="CEOPDF.pdf">Link: Ceo's PDF</a>
+        </p>
+        <div id="container1" style="min-width: 620px; height: 800px; max-width: 1000px; margin: 0 auto"></div>
+        <div id="container2" style="min-width: 620px; height: 800px; max-width: 1000px; margin: 0 auto"></div>
+        <div id="container3" style="min-width: 620px; height: 800px; max-width: 1000px; margin: 0 auto"></div>
+        <div id="container4" style="min-width: 620px; height: 800px; max-width: 1000px; margin: 0 auto"></div>
+        <div id="container5" style="min-width: 620px; height: 800px; max-width: 1000px; margin: 0 auto"></div>
 
-        <h6 style="float:left;padding:5rem;"> <b>McDonald's Corporation </b> 2019 Report on Veggie Burger</h6>
+        <h6 style="text-align:right;padding:.5rem;"> <b>McDonald's Corporation </b> 2019 Report on Veggie Burger</h6>
         <hr/>
         <script src="HighChartMonthlyLine2019.js"></script>
+        <script src="HighChartMonthlyLine.js"></script>
+        <script src="HighChartMonthlyLineHistogramTOTALS.js"></script>
+        <script src="HighChartDailyLine.js"></script>
+        <script src="HighChartMonthlyHistogramFishFillet.js"></script>
 
         <!-- Don't add more than one $.get = function (){}-->
         <!-- One of each ENDPOINT, don't override! -->
