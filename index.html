@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <style>
+
+    @font-face {
+        font-family: LovinSans;
+        src: "LovinSansWeb-Thin.otf";
+    }
+
+    div {
+        font-family: myFirstFont;
+    }
+
+    #header{
+        background-color: red;
+        width:100%;
+        height:10%;
+    }
+
+    #subheader{
+        background-color: gold;
+        float: right;
+        width:5%;
+        height: 12%;
+    }
+    </style>
+    <body>
+        <div id="chartPlaceHolder"></div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/data.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="https://code.highcharts.com/modules/histogram-bellcurve.js"></script>
+        
+        <div id="header">
+            <img src="UDkaj5UU.jpg" style="float:left;width:20%;height:10%"/>
+            <h1 style="color:gold">I'm Lovin It</h1>
+            <div id="subheader"></div>
+        </div>
+        <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+        <h6 style="float:left;padding:5rem;"> <b>McDonald's Corporation </b> 2019 Report on Veggie Burger</h6>
+        <hr/>
+        <script src="HighChartMonthlyLine2019.js"></script>
+
+        <!-- Don't add more than one $.get = function (){}-->
+        <!-- One of each ENDPOINT, don't override! -->
+
+    </body>
+</html>
+    
